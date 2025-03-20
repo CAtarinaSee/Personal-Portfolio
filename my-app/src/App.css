@@ -1,6 +1,112 @@
+/* Estilos gerais */
 body {
-  background-color: #ccccff; /* Periwinkle */
+  font-family: "Poppins", sans-serif;
+  background-color: #f9e7f7;
+  color: #333;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Botões */
+.button {
+  background-color: #6c5ce7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #a29bfe;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.hero-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2d3436;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #636e72;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Download CV Button */
+.cv-button {
+  background-color: #fd79a8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cv-button:hover {
+  background-color: #ff7675;
+}
+
+/* Profile Image */
+.profile-image {
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+}
+
+/* Footer */
+.footer {
+  background: white;
+  padding: 20px;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
