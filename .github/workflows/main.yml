@@ -20,22 +20,22 @@ jobs:
           cache: "npm"
 
       - name: Instalar dependências
-        run: npm install
         working-directory: my-app
+        run: npm ci  # Usa `ci` para garantir consistência com `package-lock.json`
 
       - name: Verificar formatação com Prettier
-        run: npx prettier --check .
         working-directory: my-app
+        run: npx prettier --check .
 
       - name: Build do projeto
-        run: npm run build
         working-directory: my-app
+        run: npm run build
 
       - name: Guardar artefatos da build
         uses: actions/upload-artifact@v4
         with:
           name: build-output
-          path: my-app/build # Atualizado para apontar para o build correto
+          path: my-app/build
 
   deploy:
     runs-on: ubuntu-latest
