@@ -1,0 +1,58 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+          cache: "npm"
+
+      - name: Instalar dependências
+        run: npm install
+        working-directory: my-app
+
+      - name: Verificar formatação com Prettier
+        run: npx prettier --check .
+        working-directory: my-app
+
+      - name: Build do projeto
+        run: npm run build
+        working-directory: my-app
+
+      - name: Guardar artefatos da build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: my-app/build # Alterado para refletir a pasta de build correta
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Baixar artefatos da build
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: my-app/build
+
+      - name: Instalar Netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Deploy para Netlify
+        run: netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod --dir my-app/build
