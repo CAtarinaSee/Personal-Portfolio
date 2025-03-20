@@ -1,4 +1,5 @@
 import "../App.css";
+import "../assets/css/variables.css";
 
 function Contacts() {
   return (

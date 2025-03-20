@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import "../App.css";
+import "../assets/css/variables.css";
 
 function Projects() {
   const projects = [

@@ -1,0 +1,11 @@
+:root {
+  --white: #fff;
+  --dark-blue: #374375;
+  --periwrinkle: #babde2;
+  --blue: #5162a5;
+  --text-color: #333;
+  --black: #000;
+
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
