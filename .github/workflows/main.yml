@@ -21,21 +21,21 @@ jobs:
 
       - name: Instalar dependências
         run: npm install
-        working-directory: personal-portfolio
+        working-directory: my-app
 
       - name: Verificar formatação com Prettier
         run: npx prettier --check .
-        working-directory: personal-portfolio
+        working-directory: my-app
 
       - name: Build do projeto
         run: npm run build
-        working-directory: personal-portfolio
+        working-directory: my-app
 
       - name: Guardar artefatos da build
         uses: actions/upload-artifact@v4
         with:
           name: build-output
-          path: personal-portfolio/build # Alterado para refletir a pasta de build correta
+          path: my-app/build # Atualizado para apontar para o build correto
 
   deploy:
     runs-on: ubuntu-latest
@@ -49,10 +49,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: personal-portfolio/build
+          path: my-app/build
 
       - name: Instalar Netlify CLI
         run: npm install -g netlify-cli
 
       - name: Deploy para Netlify
-        run: netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod --dir personal-portfolio/build
+        run: netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod --dir my-app/build
