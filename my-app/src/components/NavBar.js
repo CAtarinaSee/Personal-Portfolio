@@ -1,4 +1,5 @@
 import "../App.css";
+import "../assets/css/navbar.css";
 import "../assets/css/variables.css";
 
 import { Link } from "react-router-dom";

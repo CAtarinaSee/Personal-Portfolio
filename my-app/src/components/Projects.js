@@ -25,10 +25,10 @@ function Projects() {
 
   return (
     <section className="projects-section">
-      <h2 className="projects-title">Meus Projetos</h2>
+      {/*<h2 className="projects-title">Meus Projetos</h2>
       <p className="projects-description">
         Aqui estão alguns dos meus projetos recentes. Clique para saber mais!
-      </p>
+      </p> */}
       <div className="projects-carousel">
         <Slider {...settings}>
           {projects.map((project, index) => (
