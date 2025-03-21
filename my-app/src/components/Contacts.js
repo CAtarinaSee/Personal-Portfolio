@@ -78,14 +78,14 @@ function Contacts() {
         </p>
         <p>Redes Sociais:</p>
         <div className="social-icons">
-          <a href="#" className="icon">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" className="icon">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#" className="icon">
+          <a href="https://www.instagram.com/caatarinas_view/" className="icon">
             <i className="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/catarina-seemann-45a9b1174/"
+            className="icon"
+          >
+            <i className="fab fa-linkedin"></i>
           </a>
         </div>
       </div>
