@@ -16,6 +16,19 @@ body {
   padding: 40px 20px;
 }
 
+.CVbutton {
+  background: var(--periwrinkle);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
 /* Buttons - Glassmorphism */
 .button {
   background: var(--glass-bg);

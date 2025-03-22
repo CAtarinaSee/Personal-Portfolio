@@ -54,6 +54,14 @@ function Home() {
         <p>Programadora super junior, designer junior e muito mais.</p>
       </section>
 
+      <a
+        href="https://res.cloudinary.com/dx5vcvl6i/image/upload/v1742647599/CatarinaCV.pdf"
+        download="CatarinaSeemann.pdf"
+        className="CVbutton"
+      >
+        Download CV
+      </a>
+
       {/* Projetos */}
       <section className="projects">
         <h2>Os meus Projetos</h2>
