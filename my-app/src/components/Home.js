@@ -55,7 +55,7 @@ function Home() {
       </section>
 
       <a
-        href="https://res.cloudinary.com/dx5vcvl6i/image/upload/v1742647599/CatarinaCV.pdf"
+        href="https://res.cloudinary.com/dx5vcvl6i/image/upload/v1742648083/CatarinaSCV.jpg"
         download="CatarinaSeemann.pdf"
         className="CVbutton"
       >
