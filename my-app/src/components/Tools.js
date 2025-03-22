@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFigma,
-  faAdobe,
-  faNotion,
+  //   faAdobe,
+  //   faNotion,
   faMicrosoft,
 } from "@fortawesome/free-brands-svg-icons";
 import "./../assets/css/tools.css";
