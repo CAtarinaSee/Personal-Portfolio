@@ -3,31 +3,38 @@ import "../assets/css/variables.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import YU from "../assets/imgs/YU-01.svg";
+import Moodreads from "../assets/imgs/moodreads.png";
 
 function Home() {
   const projects = [
     {
       title: "YU",
-      image: process.env.PUBLIC_URL + "/imgs/YU-01.svg",
+      image: YU,
       link: "https://yu-mctw.vercel.app/",
     },
     {
       title: "MoodReads",
-      image: process.env.PUBLIC_URL + "/imgs/MoodReads.svg",
-      link: "https://moodreads.vercel.app/",
+      image: Moodreads,
+      link: "https://moodreads.netlify.app/",
+    },
+    {
+      title: "Nasa Picture of the Day",
+      image: YU, // Change this image
+      link: "https://nasapictureoftheday.netlify.app/",
     },
   ];
 
-  const photography = [
-    {
-      title: "Golden Hour",
-      image: process.env.PUBLIC_URL + "/imgs/photo1.jpg",
-    },
-    {
-      title: "City Lights",
-      image: process.env.PUBLIC_URL + "/imgs/photo2.jpg",
-    },
-  ];
+  // const photography = [
+  //   {
+  //     title: "Golden Hour",
+  //     image: process.env.PUBLIC_URL + "/imgs/photo1.jpg",
+  //   },
+  //   {
+  //     title: "City Lights",
+  //     image: process.env.PUBLIC_URL + "/imgs/photo2.jpg",
+  //   },
+  // ];
 
   const settings = {
     dots: true,
@@ -44,24 +51,12 @@ function Home() {
       {/* Introdução */}
       <section className="hero">
         <h1>Bem-vindo ao meu Portfólio</h1>
-        <p>
-          Sou um desenvolvedor web apaixonado por criar interfaces incríveis.
-        </p>
-      </section>
-
-      {/* About Me */}
-      <section className="about">
-        <h2>Sobre Mim</h2>
-        <p>
-          Sou um desenvolvedor front-end focado em criar experiências
-          interativas e dinâmicas. Adoro transformar ideias em realidade
-          digital.
-        </p>
+        <p>Programadora super junior, designer junior e muito mais.</p>
       </section>
 
       {/* Projetos */}
       <section className="projects">
-        <h2>Meus Projetos</h2>
+        <h2>Os meus Projetos</h2>
         <Slider {...settings}>
           {projects.map((project, index) => (
             <div key={index} className="project-card">
@@ -78,7 +73,7 @@ function Home() {
         </Slider>
       </section>
 
-      {/* Sessões de Fotografia */}
+      {/* Sessões de Fotografia 
       <section className="photography">
         <h2>Fotografia</h2>
         <Slider {...settings}>
@@ -93,7 +88,7 @@ function Home() {
             </div>
           ))}
         </Slider>
-      </section>
+      </section> */}
     </div>
   );
 }
