@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import YU from "../assets/imgs/YU-01.svg";
 import Moodreads from "../assets/imgs/moodreads.png";
+import Skills from "./Skills";
+import Tools from "./Tools";
 
 function Home() {
   const projects = [
@@ -25,17 +27,6 @@ function Home() {
     },
   ];
 
-  // const photography = [
-  //   {
-  //     title: "Golden Hour",
-  //     image: process.env.PUBLIC_URL + "/imgs/photo1.jpg",
-  //   },
-  //   {
-  //     title: "City Lights",
-  //     image: process.env.PUBLIC_URL + "/imgs/photo2.jpg",
-  //   },
-  // ];
-
   const settings = {
     dots: true,
     infinite: true,
@@ -48,20 +39,25 @@ function Home() {
 
   return (
     <div className="home-container">
-      {/* Introdução */}
       <section className="hero">
         <h1>Bem-vindo ao meu Portfólio</h1>
         <p>Programadora super junior, designer junior e muito mais.</p>
+
+        <a
+          href="https://res.cloudinary.com/dx5vcvl6i/image/upload/v1742648083/CatarinaSCV.jpg"
+          download="CatarinaSeemann.pdf"
+          className="CVbutton"
+        >
+          Download CV
+        </a>
       </section>
 
-      <a
-        href="https://res.cloudinary.com/dx5vcvl6i/image/upload/v1742648083/CatarinaSCV.jpg"
-        download="CatarinaSeemann.pdf"
-        className="CVbutton"
-      >
-        Download CV
-      </a>
+      {/* Agora apenas chamamos a componente */}
+      <Skills />
 
+      <Tools />
+
+      {/* Projetos */}
       {/* Projetos */}
       <section className="projects">
         <h2>Os meus Projetos</h2>
@@ -80,23 +76,6 @@ function Home() {
           ))}
         </Slider>
       </section>
-
-      {/* Sessões de Fotografia 
-      <section className="photography">
-        <h2>Fotografia</h2>
-        <Slider {...settings}>
-          {photography.map((photo, index) => (
-            <div key={index} className="photo-card">
-              <img
-                src={photo.image}
-                alt={photo.title}
-                className="photo-image"
-              />
-              <h3>{photo.title}</h3>
-            </div>
-          ))}
-        </Slider>
-      </section> */}
     </div>
   );
 }

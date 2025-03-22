@@ -8,6 +8,7 @@ import { AdvancedImage } from "@cloudinary/react";
 import "./App.css";
 import Navbar from "./components/NavBar";
 import Home from "./components/Home";
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contacts";
 
@@ -30,6 +31,7 @@ function App() {
           path="/"
           element={<Home cloudinaryImage={<AdvancedImage cldImg={img} />} />}
         />
+        <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

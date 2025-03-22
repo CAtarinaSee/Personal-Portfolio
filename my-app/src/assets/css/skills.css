@@ -1,0 +1,55 @@
+.skills-container {
+  background: #1f233f;
+  padding: 2rem;
+  border-radius: 15px;
+  color: var(--white);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.skills-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-left,
+.skills-right {
+  width: 48%;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1rem;
+  color: var(--periwrinkle);
+  margin-bottom: 0.3rem;
+}
+
+.skills-right p {
+  color: var(--periwrinkle);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.skills-right span {
+  font-weight: bold;
+  color: var(--white);
+}
+
+.skills-right em {
+  font-style: italic;
+}
