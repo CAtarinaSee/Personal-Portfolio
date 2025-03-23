@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../App.css";
 import "../assets/css/variables.css";
 import "../assets/css/projects.css";
