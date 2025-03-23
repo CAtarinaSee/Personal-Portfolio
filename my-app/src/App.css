@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(to right, var(--dark-blue), var(--blue));
+  background: linear-gradient(to right, var(--blue), var(--white));
   color: var(--text-color);
   margin: 0;
   padding: 0;

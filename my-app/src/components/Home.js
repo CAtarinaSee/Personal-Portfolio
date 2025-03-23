@@ -47,9 +47,9 @@ function Home() {
       <section className="projects-section">
         <div className="projects-header">
           <h2>Os meus projetos:</h2>
-          <a href="#" className="view-all">
+          <Link to="/projects" className="view-all">
             ver todos:
-          </a>
+          </Link>
         </div>
         <div className="projects-grid">
           {projects.map((project, index) => (
@@ -60,9 +60,18 @@ function Home() {
                 className="project-image"
               />
               <h3>{project.title}</h3>
-              <a href={project.link} className="view-netlify">
-                view in netlify
-              </a>
+              {project.link ? (
+                <a
+                  href={project.link}
+                  className="view-netlify"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  view in netlify
+                </a>
+              ) : (
+                <span className="disabled-link">view in netlify</span>
+              )}
             </div>
           ))}
         </div>
