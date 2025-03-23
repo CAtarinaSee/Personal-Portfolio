@@ -1,8 +1,6 @@
 import "../App.css";
 import "../assets/css/variables.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "../assets/css/projects.css";
 import YU from "../assets/imgs/YU-01.svg";
 import Moodreads from "../assets/imgs/moodreads.png";
 import Skills from "./Skills";
@@ -22,20 +20,10 @@ function Home() {
     },
     {
       title: "Nasa Picture of the Day",
-      image: YU, // Change this image
-      link: "https://nasapictureoftheday.netlify.app/",
+      image: YU, // Atualizar imagem correta
+      link: "https://nasapicturesexplore.netlify.app/",
     },
   ];
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
 
   return (
     <div className="home-container">
@@ -52,29 +40,32 @@ function Home() {
         </a>
       </section>
 
-      {/* Agora apenas chamamos a componente */}
       <Skills />
-
       <Tools />
 
       {/* Projetos */}
-      {/* Projetos */}
-      <section className="projects">
-        <h2>Os meus Projetos</h2>
-        <Slider {...settings}>
+      <section className="projects-section">
+        <div className="projects-header">
+          <h2>Os meus projetos:</h2>
+          <a href="#" className="view-all">
+            ver todos:
+          </a>
+        </div>
+        <div className="projects-grid">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image"
-                />
-                <h3>{project.title}</h3>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+              />
+              <h3>{project.title}</h3>
+              <a href={project.link} className="view-netlify">
+                view in netlify
               </a>
             </div>
           ))}
-        </Slider>
+        </div>
       </section>
     </div>
   );
