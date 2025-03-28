@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../App.css";
 import "../assets/css/variables.css";
-import "../assets/css/contacts.css";
+// import "../assets/css/contacts.css";
 
 function Contacts() {
   const [formData, setFormData] = useState({

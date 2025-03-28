@@ -1,6 +1,6 @@
 import "../App.css";
 import "../assets/css/variables.css";
-import "../assets/css/skills.css";
+// import "../assets/css/skills.css";
 
 function Skills() {
   return (

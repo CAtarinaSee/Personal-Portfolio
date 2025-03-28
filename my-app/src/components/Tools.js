@@ -1,19 +1,18 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFigma,
-  //   faAdobe,
-  //   faNotion,
-  faMicrosoft,
-} from "@fortawesome/free-brands-svg-icons";
-import "./../assets/css/tools.css";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Figma from "../assets/imgs/Figma.svg";
+import Indesign from "../assets/imgs/indesign.svg";
+// import Photoshop from "../assets/imgs/photoshop.svg";
+import Notion from "../assets/imgs/notion.svg";
+import VSCode from "../assets/imgs/vscode.svg";
+
+import "../App.css";
 
 export default function Tools() {
   const tools = [
-    { name: "Figma", icon: faFigma },
-    { name: "Photoshop", icon: faFigma }, // Change this icon
-    { name: "InDesign", icon: faFigma }, // Change this icon
-    { name: "Notion", icon: faFigma }, // Change this icon
-    { name: "VS Code", icon: faMicrosoft }, // Change this
+    { name: "Figma", icon: Figma },
+    { name: "InDesign", icon: Indesign },
+    { name: "Notion", icon: Notion },
+    { name: "VS Code", icon: VSCode },
   ];
 
   return (
@@ -22,7 +21,8 @@ export default function Tools() {
       <div className="tools-grid">
         {tools.map((tool) => (
           <div key={tool.name} className="tool-card">
-            <FontAwesomeIcon icon={tool.icon} className="tool-icon" />
+            <img src={tool.icon} alt={tool.name} className="tool-icon" />
+            <p className="tool-name">{tool.name}</p>
           </div>
         ))}
       </div>

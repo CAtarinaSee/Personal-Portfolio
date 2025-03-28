@@ -1,7 +1,11 @@
+/* Importando o CSS do Slick Carousel */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 /* General Styles */
 body {
-  font-family: "Playfair Display", serif;
-  background: var(web-white);
+  font-family: "Instrument", serif;
+  background: var(--web-white);
   color: var(--web-black);
   margin: 0;
   padding: 0;
@@ -14,6 +18,7 @@ body {
 .home-container {
   max-width: 900px;
   margin: auto;
+  padding: 20px;
 }
 
 /* Typography */
@@ -22,7 +27,7 @@ h1 {
   font-weight: bold;
   position: relative;
   display: inline-block;
-  padding-top: 30px; /* Espaço para as imagens ficarem acima do título */
+  padding-top: 30px;
 }
 
 h1::after {
@@ -49,7 +54,6 @@ h1 span::before {
   height: 5px;
   bottom: -5px;
   left: 0;
-  background: #8a2be2;
   transform: rotate(-2deg);
   z-index: -1;
 }
@@ -59,23 +63,22 @@ p {
 }
 
 /* Buttons */
-.cv-button {
-  display: flex; /* Torna o contêiner flexível */
-  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
-  margin-left: 0; /* Garantir que o botão encoste à esquerda */
-  padding: 12px 24px; /* Ajuste do botão */
-  text-align: left;
-  background: var(--web-lilac);
-  color: var(--web-white);
+.cv-button,
+.button {
+  display: flex;
+  justify-content: flex-start;
   padding: 12px 24px;
+  text-align: left;
   border: none;
   border-radius: 25px;
   font-size: 18px;
+  background: var(--web-lilac);
+  color: var(--web-white);
 }
 
-.button:hover,
-.cv-button:hover {
-  background: var(web-purple);
+.cv-button:hover,
+.button:hover {
+  background: var(--web-purple);
 }
 
 /* Hero Section */
@@ -91,27 +94,27 @@ p {
 }
 
 /* Positioning the Images (hearts and rodas) */
-.rodas {
+.rodas,
+.hearts {
   position: absolute;
+  z-index: 10;
+}
+
+.rodas {
   top: 110px;
   left: 25%;
-  transform: translateX(-50%);
   width: 450px;
-  height: auto;
-  z-index: 10;
+  transform: translateX(-50%);
 }
 
 .hearts {
-  position: absolute;
   top: 45px;
   left: 35%;
-  transform: translateX(-50%);
   width: 210px;
-  height: auto;
-  z-index: 10;
+  transform: translateX(-50%);
 }
 
-/* Estilos da Navbar */
+/* Navbar */
 nav {
   padding: 10px 20px;
 }
@@ -137,12 +140,11 @@ nav ul li a {
   border-radius: 5px;
   background-color: transparent;
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    opacity 0.3s ease;
+    background-color 0.3s,
+    color 0.3s,
+    opacity 0.3s;
 }
 
-/* Efeito de hover nos links */
 nav ul li a:hover {
   background-color: var(--web-lilaclight);
   color: var(--web-black);
@@ -160,22 +162,243 @@ nav ul li a:hover {
     margin: 10px 0;
   }
 
-  /* Melhorando a disposição da home-container para telas pequenas */
   .home-container {
-    padding: 20px; /* Ajusta o padding para telas menores */
+    padding: 20px;
   }
 
   h1 {
-    font-size: 48px; /* Ajusta o tamanho da fonte para telas menores */
+    font-size: 48px;
   }
 
   .header {
-    padding: 40px 20px; /* Ajusta o padding da seção de herói */
+    padding: 40px 20px;
   }
 
   .rodas,
   .hearts {
-    width: 100px; /* Reduz o tamanho das imagens para telas pequenas */
-    top: 50px; /* Ajusta a posição */
+    width: 100px;
+    top: 50px;
   }
+}
+
+/* Estilo do Slider */
+.projects-carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.slick-prev,
+.slick-next {
+  background-color: transparent;
+  border: 2px solid var(--web-black);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: var(--web-black);
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: var(--web-lilac);
+}
+
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: var(--web-black);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--web-lilac);
+}
+
+/* Estilo dos Cards */
+.project-card {
+  background-color: var(--web-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 40px 30px;
+  margin: 0 20px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--web-black);
+  margin-bottom: 15px;
+}
+
+.view-netlify {
+  font-size: 1rem;
+  color: var(--web-lilac);
+  text-decoration: none;
+}
+
+.view-netlify:hover {
+  color: var(--web-purple);
+  text-decoration: underline;
+}
+
+.disabled-link {
+  font-size: 1rem;
+  color: var(--web-gray);
+  text-decoration: none;
+}
+
+/* Responsividade do Slider */
+@media (max-width: 768px) {
+  .projects-carousel {
+    padding: 20px 10px;
+  }
+
+  .project-card {
+    padding: 20px 15px;
+    margin: 10px 0;
+  }
+
+  .project-image {
+    max-width: 100%;
+  }
+}
+
+/* Seção de Skills */
+.skills-container {
+  padding: 2rem;
+  border-radius: 15px;
+  color: var(--web-purple);
+  box-shadow: var(--web-lilac);
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.skills-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-left li,
+.skills-right li {
+  color: var(--web-bluedark);
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.skills-right p {
+  color: var(--web-bluedark);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.skills-right span {
+  font-weight: bold;
+  font-style: italic;
+  color: var(--web-bluedarker);
+}
+
+li {
+  font-size: 1rem;
+  color: var(--web-preto);
+  margin-bottom: 0.3rem;
+}
+
+/* Seção de Tools */
+/* Seção de Tools - Ajustes */
+.tools-container {
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 900px; /* Aumentei o max-width para dar mais espaço */
+  margin: auto;
+  text-align: left;
+}
+
+.tools-title {
+  font-size: 20px; /* Aumentei o tamanho da fonte do título */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Aumentei o gap para maior espaçamento entre o texto e o ícone */
+}
+
+.tools-icon {
+  font-size: 24px; /* Aumentei o tamanho do ícone */
+}
+
+.tools-grid {
+  display: flex;
+  gap: 30px; /* Aumentei o gap entre os cartões de ferramentas */
+  margin-top: 30px; /* Ajustei o espaço superior */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte em telas menores */
+}
+
+.tool-card {
+  background: #fff;
+  border-radius: 12px; /* Aumentei o border-radius para um arredondado mais suave */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Aumentei o tamanho da sombra */
+  padding: 1.5rem; /* Aumentei o padding interno */
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  max-width: 200px; /* Defini um limite de largura para cada cartão */
+  flex: 1 1 200px; /* Permite que os cartões se ajustem automaticamente */
+}
+
+.tool-card:hover {
+  transform: scale(1.1);
+}
+
+.tool-icon {
+  font-size: 48px; /* Aumentei o tamanho do ícone */
+  color: var(--web-lilac); /* Cor do ícone ajustada */
+}
+
+.tool-name {
+  font-size: 20px; /* Aumentei o tamanho da fonte do nome da ferramenta */
+  font-weight: bold;
+  margin-top: 12px; /* Ajustei o espaçamento superior */
 }
