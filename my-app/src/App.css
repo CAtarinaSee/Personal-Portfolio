@@ -384,8 +384,8 @@ li {
   padding: 1.5rem; /* Aumentei o padding interno */
   text-align: center;
   transition: transform 0.2s ease-in-out;
-  max-width: 200px; /* Defini um limite de largura para cada cartão */
-  flex: 1 1 200px; /* Permite que os cartões se ajustem automaticamente */
+  max-width: 200px;
+  flex: 1 1 200px;
 }
 
 .tool-card:hover {
