@@ -1,11 +1,13 @@
 :root {
-  --white: #fff;
-  --dark-blue: #374375;
-  --periwrinkle: #babde2;
-  --blue: #5162a5;
-  --text-color: #333;
-  --black: #000;
-
-  --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.2);
+  --web-black: #000000;
+  --web-preto: #262738;
+  --web-bluedarker: #6166a8;
+  --web-bluedark: #757bc8;
+  --web-blue: #9fa0ff;
+  --web-purple: #bbadff;
+  --web-purplelight: #cbb2fe;
+  --web-lilac: #dab6fc;
+  --web-lilaclight: #ddbcfd;
+  --web-branco: #f6edff;
+  --web-white: #ffffff; /* Corrigido */
 }

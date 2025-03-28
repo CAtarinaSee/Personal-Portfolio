@@ -18,9 +18,7 @@ export default function Tools() {
 
   return (
     <section className="tools-container">
-      <h2 className="tools-title">
-        <span className="tools-icon">♦</span> Tools
-      </h2>
+      <h2 className="tools-title">Tools</h2>
       <div className="tools-grid">
         {tools.map((tool) => (
           <div key={tool.name} className="tool-card">

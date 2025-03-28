@@ -6,6 +6,8 @@ import YU from "../assets/imgs/YU-01.svg";
 import Moodreads from "../assets/imgs/moodreads.png";
 import Skills from "./Skills";
 import Tools from "./Tools";
+import hearts from "../assets/imgs/hearts.png";
+import rodas from "../assets/imgs/Rodas.png";
 
 function Home() {
   const projects = [
@@ -21,25 +23,36 @@ function Home() {
     },
     {
       title: "Nasa Picture of the Day",
-      image: YU, // Atualizar imagem correta
+      image: YU, // Replace with the correct image
       link: "https://nasapicturesexplore.netlify.app/",
     },
   ];
 
   return (
     <div className="home-container">
-      <section className="hero">
-        <h1>Bem-vindo ao meu Portfólio</h1>
-        <p>Programadora super junior, designer junior e muito mais.</p>
+      <header className="header">
+        <h1>
+          Bem-vindo ao meu
+          <img src={hearts} alt="Corações decorativos" className="hearts" />
+          <img src={rodas} alt="Rodas decorativas" className="rodas" />
+          <br />
+          Portfólio!
+        </h1>
+      </header>
 
-        <a
-          href="https://res.cloudinary.com/dx5vcvl6i/image/upload/v1742648083/CatarinaSCV.jpg"
-          download="CatarinaSeemann.pdf"
-          className="CVbutton"
+      <div>
+        <button
+          className="cv-button"
+          onClick={() =>
+            window.open(
+              "https://res.cloudinary.com/dx5vcvl6i/image/upload/v1742648083/CatarinaSCV.jpg",
+              "_blank"
+            )
+          }
         >
           Download CV
-        </a>
-      </section>
+        </button>
+      </div>
 
       <Skills />
       <Tools />
@@ -49,7 +62,7 @@ function Home() {
         <div className="projects-header">
           <h2>Os meus projetos:</h2>
           <Link to="/projects" className="view-all">
-            ver todos:
+            Ver todos
           </Link>
         </div>
         <div className="projects-grid">
@@ -57,7 +70,7 @@ function Home() {
             <div key={index} className="project-card">
               <img
                 src={project.image}
-                alt={project.title}
+                alt={`Imagem do projeto ${project.title}`}
                 className="project-image"
               />
               <h3>{project.title}</h3>
@@ -68,10 +81,10 @@ function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  view in netlify
+                  View in Netlify
                 </a>
               ) : (
-                <span className="disabled-link">view in netlify</span>
+                <span className="disabled-link">View in Netlify</span>
               )}
             </div>
           ))}

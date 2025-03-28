@@ -21,8 +21,8 @@ function Skills() {
               <li>HTML, CSS</li>
               <li>Javascript</li>
               <li>React.js</li>
-              <li>Phyton</li>
-              <li>C</li>
+              {/* <li>Phyton</li>
+              <li>C</li> */}
             </ul>
           </div>
           <div className="skills-right">

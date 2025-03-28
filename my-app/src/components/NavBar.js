@@ -1,12 +1,14 @@
 import "../App.css";
-import "../assets/css/navbar.css";
+import "../App.css";
 import "../assets/css/variables.css";
 
 import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav>
+    <nav className="navbar">
+      {" "}
+      {/* Optional: you can add a class to the <nav> */}
       <ul>
         <li>
           <Link to="/">Início</Link>
