@@ -61,7 +61,7 @@ function Home() {
           className="cv-button"
           onClick={() =>
             window.open(
-              "https://res.cloudinary.com/dx5vcvl6i/image/upload/v1742648083/CatarinaSCV.jpg"
+              "https://res.cloudinary.com/dx5vcvl6i/image/upload/v1742648083/CatarinaSCV.jpg",
             )
           }
         >
